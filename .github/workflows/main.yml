@@ -51,8 +51,8 @@ jobs:
     - name: executing remote ssh commands to deploy
       uses: appleboy/ssh-action@master
       with:
-        host: ${{ secrets.HOST }}
-        username: ${{ secrets.USER }}
-        key: ${{ secrets.SSH_KEY }}
-        passphrase: ${{ secrets.PASSPHRASE }} # Если  ваш ssh-ключ защищён фразой-паролем
+        host: "130.193.42.31"
+        username: "dkobachevskiy13"
+        key: "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABgQCp/gK/HNKTrJ2O9H1I1BH0E7MMHD64IljWxaIQJQPGuarTVlpZhWH+wQ9d+6BqvIVBVzpyejuNKjdOyPIsEWajgwuZmlb3cCvfQy9z2iqxY07uciJMWO3f6fF8Uw5HAUqVjYm+j4KbA1C+adoI0NvRS7v0J3eBsNLlaJxrlo491PjnRJh1i7LjY7H3cRjEOnQ4uSa+jpFZn006eSHopYL5WHgeG3thDE07xRvOFp0Wev4LJfYxRbZI+e3HvNUyMV4Bq23Srz3yEjNlgPYrLL8imABiDXlcnlie3/yKVxAGfC0L1YK1zd0ZxFY2cFXf79zivlkgEjQYliW7rTyacOM/ycR/2tc8sEquDDTXKYUXNOrS+sWsjDVRQvfZmEDfkQhAxPMXxR065PotOFO6P6t1lp4Hyl5WKhujc1yfRQF/3eQIrJb8fCaALgfa84fM1Sh6R1vE9tbdoNVbcYVcM/f8c5Oad6hKrO9J4WW5trc5K+NWbC/TLOmcasO+CLMpT8U= vismut@vismut-TM13"
+        passphrase: "xc2cBrnv" # Если  ваш ssh-ключ защищён фразой-паролем
         script: whoami
