@@ -51,10 +51,10 @@ jobs:
     - name: executing remote ssh commands to deploy
       uses: appleboy/ssh-action@master
       with:
-        host: ${{ secrets.HOST }}
-        username: ${{ secrets.USER }}
-        key: ${{ secrets.SSH_KEY }}
-        passphrase: ${{ secrets.PASSPHRASE }} # Если ваш ssh-ключ защищён фразой-паролем
+        host: 130.193.42.31
+        username: dkobachevskiy
+        key: AAAAB3NzaC1yc2EAAAADAQABAAABgQDauPYj/iv3J3fwvA0GTQHdB+5WSQW6o0sfsE8MXATOgOYe3tol3fDY+bVNvWq5GkNEaUVpmF4I7bYQme2P54zjBgG/+aiElgUJvw6uoyfqkAp35PEnrHs8oVVJ5kKJsCmsqIVab688D4jY1kxYvDQQLdZ2xVoycmbuzVL1HSxCwfCl4IYfhmfKolUpf6E4ntPSyEJpSvHUVkQrr7Dh0rGaSJopUw7vaaJHI/x1VmDkEcIGyXQpttVPvfSv2OwFei0AcI2Ob/AtC2D0QevCIjU4dSMC9Z4Vrb8JebVRK4DX7zU1rOOLMRoSk+GdiXBVsaZn40oW4dvLIH85URsSRg2QAfpGO6DyXeLtrpI8XZNZP5BXr8ChLOp4wAsL/Y++SaFDOI2Nh0eUVM2wZ3L8RLJThvPd/4SfZCAIopISHxBlTQri/YbhbyG/8K70cAAMUOOczhEpbqOvoNO0uLZz8E4NdQ8Q0S8VQBWRrPTYhWhhNwEa2nBEUUmQA4IgJ3Hw9x0=
+        passphrase: xc2cBrnv
         script: |
           sudo docker pull dkobachevskiy/sprint19
           sudo docker stop $(sudo docker ps -a -q)
