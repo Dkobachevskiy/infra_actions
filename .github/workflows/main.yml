@@ -56,6 +56,6 @@ jobs:
         key: ${{ secrets.SSH_KEY }}
         passphrase: ${{ secrets.PASSPHRASE }} # Если ваш ssh-ключ защищён фразой-паролем
         script: |
-          sudo docker pull dkobachevskiy/sprint19
+          sudo docker pull ${{ secrets.USER }}/sprint19
           sudo docker stop $(sudo docker ps -a -q)
-          sudo docker run --rm -d -p 5000:5000 dkobachevskiy/sprint19
+          sudo docker run --rm -d -p 5000:5000 ${{ secrets.USER }}/sprint19
